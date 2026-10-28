@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1F2742">
+  <title>Delagames</title>
+  <link rel="icon" type="image/png" href="img/pino.png">
+  <style>
+    @font-face { font-family: 'Jersey 10'; src: url('Jersey10-Regular.ttf') format('truetype'); font-display: swap; }
+    :root { --noche: #1F2742; --marfil: #F4EFE6; --brasa: #FFB347; --suave: #A9B3D9; --contorno: #100C14; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      background: var(--noche);
+      background-image: radial-gradient(#2E3A63 1px, transparent 1px);
+      background-size: 12px 12px;
+      color: var(--marfil);
+      font-family: 'Jersey 10', monospace;
+      font-size: 22px;
+      -webkit-font-smoothing: none;
+      padding: calc(24px + env(safe-area-inset-top)) 16px 32px;
+    }
+    img { image-rendering: pixelated; }
+    header { text-align: center; margin: 8px 0 28px; }
+    h1 { margin: 0; font-weight: 400; font-size: 3rem; color: var(--brasa); text-shadow: 4px 4px 0 var(--contorno); letter-spacing: 1px; }
+    header p { margin: 4px 0 0; color: var(--suave); }
+    main { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(260px, 300px)); justify-content: center; max-width: 960px; margin: 0 auto; }
+    .juego {
+      display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 8px 10px 14px;
+      text-align: center; color: inherit; text-decoration: none;
+      border: 12px solid transparent; border-image: url('img/ventana.png') 12 fill / 12px stretch;
+      transition: transform 0.1s steps(2);
+    }
+    .juego:hover, .juego:focus-visible { transform: translateY(-4px); outline: none; }
+    .juego img { width: 128px; height: 128px; }
+    .juego h2 { margin: 0; font-weight: 400; font-size: 1.5rem; color: var(--brasa); text-shadow: 3px 3px 0 var(--contorno); }
+    .juego p { margin: 0; color: var(--suave); line-height: 1.25; font-size: 1rem; }
+    .jugar { margin-top: 4px; padding: 0 14px 3px; color: var(--marfil); border: 12px solid transparent; border-image: url('img/boton.png') 12 fill / 12px stretch; }
+    .pronto { opacity: 0.55; border-style: dashed; }
+    footer { text-align: center; margin-top: 32px; font-size: 0.8rem; color: rgba(169, 179, 217, 0.7); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Delagames</h1>
+    <p>Juegos hechos a mano, en pixel art</p>
+  </header>
+  <main>
+    <a class="juego" href="https://delagames.github.io/el-pino-calcinado/">
+      <img src="img/pino.png" alt="" width="128" height="128">
+      <h2>El Pino Calcinado</h2>
+      <p>Una posada de montaña para Pokémon viajeros. Manolo, su Charizard y la chistorra. Cachimbita, chistorra y a dormir.</p>
+      <span class="jugar">Jugar</span>
+    </a>
+  </main>
+  <footer>Proyectos personales sin ánimo de lucro, no afiliados a Nintendo, Creatures ni GAME FREAK.</footer>
+</body>
+</html>
